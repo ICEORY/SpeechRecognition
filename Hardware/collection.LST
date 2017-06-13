@@ -1,0 +1,50 @@
+C51 COMPILER V7.08   COLLECTION                                                            10/02/2013 11:14:53 PAGE 1   
+
+
+C51 COMPILER V7.08, COMPILATION OF MODULE COLLECTION
+OBJECT MODULE PLACED IN collection.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE collection.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          
+   3          #define uint unsigned int
+   4          #define uchar unsigned char
+   5          uint MAD_DATA=0;
+   6          #include "TIMER.h"
+   7          #include "ADCHANGE.h"
+   8          #include "LCDSHOW.h"
+   9          #include "SENDDATA.h"
+  10          
+  11          void main()
+  12          {
+  13   1              FAD_INITIAL();//调用AD初始化
+  14   1              FSEND_INITIAL();//调用数据发送初始化
+  15   1              while(1)
+  16   1              {
+  17   2                      MAD_DATA=FAD_CHANGE();//获取数据
+  18   2      
+  19   2                      LCD_DATA_BAI=MAD_DATA/100;//将数据分解为百十个位
+  20   2                      LCD_DATA_SHI=MAD_DATA%100/10;
+  21   2                      LCD_DATA_GE=MAD_DATA%10;
+  22   2      
+  23   2                      FSEND_DATA(LCD_DATA_BAI,LCD_DATA_SHI,LCD_DATA_GE);//发送数据给PC
+  24   2                      //FLCD_DISPLAY();
+  25   2                      FTIME_1MS(2);
+  26   2              }
+  27   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    340    ----
+   CONSTANT SIZE    =     22    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      8    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"collection.obj" 
+TO "speechcollection" 
+RAMSIZE(256) 
