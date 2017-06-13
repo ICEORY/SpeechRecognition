@@ -30,27 +30,27 @@
 
 #### 单片机程序结构
 
-![mcu_program_structure](E:\iceory\github-project\speech-recognition\语音识别\fig\mcu_program_structure.png)
+![mcu_program_structure](./fig/mcu_program_structure.png)
 
 #### MFC上位机系统结构
 
-![mfc_structure](E:\iceory\github-project\speech-recognition\语音识别\fig\mfc_structure.png)
+![mfc_structure](./fig/mfc_structure.png)
 
 #### 在线模式下的程序结构
 
-![online_mode_program_pipeline](E:\iceory\github-project\speech-recognition\语音识别\fig\online_mode_program_pipeline.png)
+![online_mode_program_pipeline](./fig/online_mode_program_pipeline.png)
 
 #### 测试模式下程序结构
 
-![test_mode_program_pipeline](E:\iceory\github-project\speech-recognition\语音识别\fig\test_mode_program_pipeline.png)
+![test_mode_program_pipeline](./fig/test_mode_program_pipeline.png)
 
 #### 测试模式下子窗口程序
 
-![test_mode_sub_window_program](E:\iceory\github-project\speech-recognition\语音识别\fig\test_mode_sub_window_program.png)
+![test_mode_sub_window_program](./fig/test_mode_sub_window_program.png)
 
 #### MATLAB数据处理结构
 
-![matlab_data_processing](E:\iceory\github-project\speech-recognition\语音识别\fig\matlab_data_processing.png)
+![matlab_data_processing](./fig/matlab_data_processing.png)
 
 ### 界面设计
 
@@ -58,21 +58,21 @@
 
 主界面设计简洁明了，便于操作。测试者可以通过串口选择不同的串口编号，不同的USB转串口线在PC上显示的串口编号有所差异，所以要根据实际需要选择。采样数据以及采样频率在编辑框中实时显示，并能够在绘图区动态绘制采样数据形成的曲线。
 
-![main_window](E:\iceory\github-project\speech-recognition\语音识别\fig\main_window.jpg)
+![main_window](./fig/main_window.jpg)
 
 #### 测试模式下子窗口
 
-![test_mode_sub_window](E:\iceory\github-project\speech-recognition\语音识别\fig\test_mode_sub_window.jpg)
+![test_mode_sub_window](./fig/test_mode_sub_window.jpg)
 
 #### 主窗口绘制动态曲线
 
-![main_window_draw_curves](E:\iceory\github-project\speech-recognition\语音识别\fig\main_window_draw_curves.jpg)
+![main_window_draw_curves](./fig/main_window_draw_curves.jpg)
 
 ### 数据处理结果
 
 在测试模式下采集完数据后，调用matlab函数对数据进行处理，结果如下所示，可以看出noise在频域上呈现均匀分布，而四个signal数据显示出语音在某段频率区间较强，而不同的目标声音之间也有差异。故可以利用这一特点区分不同的语音。
 
-![data_processing_result](E:\iceory\github-project\speech-recognition\语音识别\fig\data_processing_result.jpg)
+![data_processing_result](./fig/data_processing_result.jpg)
 
 ### 总结
 
@@ -100,7 +100,7 @@ MSComm控件也可以发送数据到发送缓冲区并通过串口将数据发�
 
 Visual studio 在使用其他软件的函数时通常都要进行相关的环境设置。在使用MATLAB engine进行混合编程时，需要将matlab需要的头文件以及库文件等添加到visual studio的搜寻路径中。通常设置如下：在Class View 的界面下对建立的工程点击右键，选择properties，出现如下界面：
 
-![vs_setting](E:\iceory\github-project\speech-recognition\语音识别\fig\vs_setting.jpg)
+![vs_setting](./fig/vs_setting.jpg)
 
 在VC++ Directies中添加library以及include的搜寻路径，在linker中添加所需要的lib文件名称。这样便可解决调用matlab engine过程中出现的大部分“不能识别符号”的错误了。
 
