@@ -1,0 +1,120 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>FUNCTION</title><meta name="generator" content="MATLAB 7.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-10-01"><meta name="DC.source" content="FUNCTION.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="comment">% close all;clear all;clc</span>
+<span class="comment">% load 'VoiceData.mat'</span>
+<span class="comment">% data=double(DATA);</span>
+<span class="comment">% temp=data(1:1000);</span>
+<span class="comment">% plot(temp);</span>
+<span class="comment">% grid on;</span>
+<span class="comment">% hold on;</span>
+<span class="comment">% title('&#22768;&#38899;&#26354;&#32447;');</span>
+<span class="comment">% %xlable('TIME');</span>
+<span class="comment">% % ylable('POWER');</span>
+<span class="comment">%  nfft=256;</span>
+<span class="comment">% fs=1000;</span>
+<span class="comment">% window=hanning(256);</span>
+<span class="comment">% noverlap=128;</span>
+<span class="comment">% [pyy,f]=PSD(temp,nfft,fs,window,noverlap);</span>
+<span class="comment">% figure,plot(f,pyy);</span>
+<span class="keyword">function</span> FUNCTION()
+close <span class="string">all</span>;clear <span class="string">all</span>;clc
+load <span class="string">'TestData.mat'</span>
+data=double(DATA(1:3000));
+flashing=double(Flashing(1:3000));
+plot(data);
+hold <span class="string">on</span>;
+plot(flashing);
+hold <span class="string">on</span>;
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.11<br></p></div><!--
+##### SOURCE BEGIN #####
+% close all;clear all;clc
+% load 'VoiceData.mat'
+% data=double(DATA);
+% temp=data(1:1000);
+% plot(temp);
+% grid on;
+% hold on;
+% title('声音曲线');
+% %xlable('TIME');
+% % ylable('POWER');
+%  nfft=256;
+% fs=1000;
+% window=hanning(256);
+% noverlap=128;
+% [pyy,f]=PSD(temp,nfft,fs,window,noverlap);
+% figure,plot(f,pyy);
+function FUNCTION()
+close all;clear all;clc
+load 'TestData.mat'
+data=double(DATA(1:3000));
+flashing=double(Flashing(1:3000));
+plot(data);
+hold on;
+plot(flashing);
+hold on;
+
+##### SOURCE END #####
+--></body></html>
